@@ -12,16 +12,18 @@
     <script src="./index.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    <div id="app">{{ message }}</div>
+    <div id="app">
+        <div>{{zhonghe["招录单位名称"]}}</div>
+    </div>
 
     <script>
         const { createApp, ref } = Vue
 
         createApp({
             setup() {
-                const message = ref('Hello vue!')
+                const listZ = ref(zhonghe)
                 return {
-                    message
+                    listZ
                 }
             }
         }).mount('#app')
